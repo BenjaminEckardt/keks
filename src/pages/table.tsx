@@ -10,6 +10,10 @@ interface Column {
     header: string;
 }
 
+const toString = (value: any) => {
+    return value === null || value === undefined ? '' : String(value);
+};
+
 class Table extends React.Component<Props, {}> {
     public render() {
         return (
@@ -28,7 +32,7 @@ class Table extends React.Component<Props, {}> {
                     <tr key={index}>
                         {this.props.columns.map((column) => (
                             <td key={column.key}>
-                                {cookie[column.key]}
+                                {toString(cookie[column.key])}
                             </td>
                         ))}
                     </tr>
