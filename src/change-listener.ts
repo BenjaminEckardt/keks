@@ -11,7 +11,6 @@ const setBadgeText = (hijackMatches) => {
     }
 };
 
-
 const updateBadge = () => {
     getHijacks()
         .then((hijackedResults) => hijackedResults.filter((match) => match.isHijacked))
