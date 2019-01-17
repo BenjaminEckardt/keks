@@ -1,0 +1,154 @@
+$primary-color: #333;
+$background-color: #FEFEFE;
+$table-border: #BBB 1px dashed;
+$container-width: 80%;
+$inner-container-width: 65%;
+$active-background-color: #75da82;
+
+%table-cell {
+    padding: 4px;
+    border-bottom: $table-border;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#k-icon {
+    fill: $active-background-color;
+}
+
+.headline {
+    font-size: 40px;
+}
+
+.configuration-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+button {
+    padding: 5px;
+    border: #BBB 1px solid;
+    background-color: #EEE;
+    color: $primary-color;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 300ms ease-in;
+
+    &:hover {
+        background-color: $active-background-color;
+        transition: background-color 300ms ease-out;
+    }
+}
+
+.main-actions {
+    & button {
+        margin: 5px;
+    }
+}
+
+.transformation-with-tables {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: $primary-color 1px dashed;
+}
+
+.transformation-container {
+    width: $container-width;
+    display: flex;
+}
+
+.transformation-column {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cookie-filter {
+    width: $inner-container-width;
+}
+
+.cookie-override {
+    width: $inner-container-width;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.input-text {
+    width: 200px;
+    font-size: small;
+}
+
+.input-checkbox {
+    width: 110px;
+}
+
+.shorthand {
+    width: $inner-container-width;
+}
+
+.detail-actions {
+    padding-top: 20px;
+
+    & button {
+        margin: 5px;
+    }
+}
+
+.import-export {
+    display: flex;
+    flex-direction: column;
+}
+
+.import-export-actions {
+    display: flex;
+    justify-content: center;
+
+    & button {
+        margin: 5px;
+    }
+}
+
+.separator {
+    width: $container-width;
+}
+
+table {
+    max-width: 90%;
+    thead {
+        th {
+            @extend %table-cell;
+
+            &:not(:first-child) {
+                border-left: $table-border;
+            }
+        }
+    }
+    tbody {
+        td {
+            @extend %table-cell;
+
+            &:not(:first-child) {
+                border-left: $table-border;
+            }
+        }
+    }
+}

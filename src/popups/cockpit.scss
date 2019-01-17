@@ -1,0 +1,54 @@
+$primary-color: #333;
+$background-color: #FEFEFE;
+$active-background-color: #75da82;
+
+.cockpit-container {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  background-color: $background-color;
+  color: $primary-color;
+}
+
+.cockpit-entry {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.cockpit-entry-label {
+  max-width: 80px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+button {
+  padding: 5px;
+  border: #BBB 1px solid;
+  background-color: #EEE;
+  color: $primary-color;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 300ms ease-in;
+
+  &:hover {
+    background-color: $active-background-color;
+    transition: background-color 300ms ease-out;
+  }
+}
+
+.configuration-link {
+  margin: 5px;
+}
+
+.active {
+  background-color: $active-background-color;
+}
