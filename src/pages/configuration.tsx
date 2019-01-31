@@ -15,7 +15,7 @@ import {
 
 import {CookieFilter} from './cookie-filter';
 import {CookieOverride} from './cookie-override';
-import {Column, Table} from './Table';
+import {Column, Table} from './table';
 import {Field} from './field';
 import {ImportExport} from './import-export';
 
